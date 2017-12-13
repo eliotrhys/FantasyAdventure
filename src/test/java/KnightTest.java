@@ -4,6 +4,8 @@ import Rooms.Enemy;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.assertEquals;
 
 public class KnightTest {
@@ -13,7 +15,7 @@ public class KnightTest {
 
     @Before
     public void before(){
-        testKnight = new Knight("Sir Fucking Cool", 100, Weapon.FLAMETHROWER);
+        testKnight = new Knight("Sir Fucking Cool", 100, Weapon.FLAMETHROWER, new ArrayList<>());
         testEnemy = new Enemy("Evil Duck", 20, 40);
     }
 

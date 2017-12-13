@@ -9,8 +9,12 @@ public abstract class Melee extends Player {
         return weapon;
     }
 
-    public void attack(Enemy enemy){
+    public String attack(Enemy enemy){
         int damage = (enemy.getHealthValue() - weapon.getAttackValue());
         enemy.setHealthValue(damage);
+        if (enemy.getHealthValue() < 1){
+            return enemy.getName() + " is dead!";
+        }
+        return null;
     }
 }

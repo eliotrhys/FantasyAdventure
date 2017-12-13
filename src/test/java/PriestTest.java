@@ -2,6 +2,8 @@ import Players.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.assertEquals;
 
 public class PriestTest {
@@ -14,7 +16,7 @@ public class PriestTest {
     @Before
     public void before(){
         testPriest = new Priest("Holy Michael The Priest", 70, Potion.BUCKFAST);
-        testKnight = new Knight("Sir Fucking Cool", 100, Weapon.FLAMETHROWER);
+        testKnight = new Knight("Sir Fucking Cool", 100, Weapon.FLAMETHROWER, new ArrayList<>());
         testWizard = new Wizard("Billy Magic", 40, Creature.PUPPY, 60);
     }
 
