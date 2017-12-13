@@ -1,5 +1,7 @@
 package Players;
 
+import Rooms.Enemy;
+
 public class Wizard extends Magic {
 
     int fireball;
@@ -15,5 +17,8 @@ public class Wizard extends Magic {
         return fireball;
     }
 
-    public void attack()
+    public void attack(Enemy enemy){
+        int damage = (enemy.getHealthValue() - fireball);
+        enemy.setHealthValue(damage);
+    }
 }

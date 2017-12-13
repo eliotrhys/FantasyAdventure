@@ -7,4 +7,10 @@ public abstract class Healer extends Player{
     public Potion getPotion() {
         return potion;
     }
+
+    public void heal(Player player){
+        int health = (player.getHealth() + potion.getHealingValue());
+        player.setHealth(health);
+    }
+
 }

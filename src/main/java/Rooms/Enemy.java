@@ -1,5 +1,7 @@
 package Rooms;
 
+import Players.Player;
+
 public class Enemy {
 
     String name;
@@ -26,5 +28,15 @@ public class Enemy {
 
     public void setHealthValue(int healthValue) {
         this.healthValue = healthValue;
+    }
+
+    public String attack(Player player, Room room){
+        int damage = (player.getHealth() - attackValue);
+        player.setHealth(damage);
+        if (player.getHealth() < 1) {
+            room.removePlayer(player);
+            return "You have died.";
+        }
+        return null;
     }
 }

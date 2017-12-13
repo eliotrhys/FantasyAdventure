@@ -14,8 +14,7 @@ public enum Potion {
         this.healingValue = healingValue;
     }
 
-
-
-
-
+    public int getHealingValue() {
+        return healingValue;
+    }
 }
