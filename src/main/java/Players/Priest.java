@@ -7,4 +7,6 @@ public class Priest extends Healer {
         this.health = health;
         this.potion = potion;
     }
+
+
 }
